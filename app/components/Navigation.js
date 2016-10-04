@@ -22,7 +22,7 @@ export default class Navigation extends Component {
               <Link to="/">Dashboard</Link>
             </li>
             <li className={(activeTab === 'training') ? 'active' : ''}>
-              <Link to="/training">Train</Link>
+              <Link to="/training">Training</Link>
             </li>
           </ul>
           <ul className="nav navbar-nav navbar-right">
