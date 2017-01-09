@@ -7,6 +7,11 @@ import routes from './routes';
 import configureStore from './store/configureStore';
 import './app.global.css';
 
+window.jQuery = require('jquery');
+
+require('bootstrap');
+require('./utils/promisification');
+
 const store = configureStore();
 const history = syncHistoryWithStore(hashHistory, store);
 

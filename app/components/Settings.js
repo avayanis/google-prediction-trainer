@@ -3,7 +3,7 @@ import { shell } from 'electron';
 
 class Settings extends Component {
   static propTypes = {
-    save: PropTypes.func.isRequired,
+    saveSettings: PropTypes.func.isRequired,
     settings: PropTypes.object.isRequired
   }
 
@@ -31,7 +31,7 @@ class Settings extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
 
-    const { save } = this.props;
+    const { saveSettings } = this.props;
     const form = e.target;
     const inputItems = form.getElementsByTagName('input');
     const newSettings = {};
@@ -43,7 +43,7 @@ class Settings extends Component {
       newSettings[item.id] = item.value;
     }
 
-    save(newSettings);
+    saveSettings(newSettings);
   }
 
   openSupportLink(e) {
@@ -60,6 +60,15 @@ class Settings extends Component {
               For instructions on creating your Google API credentials, <a href="https://support.google.com/cloud/answer/6158849?hl=en" onClick={this.openSupportLink}>click here</a>.
             </div>
             <form id="form-settings" onSubmit={this.handleSubmit}>
+              <div className="form-group">
+                <label htmlFor="googleProjectKey">Project API Key</label>
+                <input
+                  required
+                  type="text"
+                  className="form-control"
+                  id="googleProjectKey"
+                />
+              </div>
               <div className="form-group">
                 <label htmlFor="googleClientId">Client ID</label>
                 <input

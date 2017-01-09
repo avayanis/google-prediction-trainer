@@ -1,3 +1,32 @@
 body {
   padding-top: 70px;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */
+}
+
+#training-csv-preview {
+  margin: 20px 0px 0px;
+  overflow: scroll;
+  width: 100%;
+}
+
+.training-btn {
+  margin: 0 0 0 15px;
+}
+
+#training-csv-preview .table td,
+#training-csv-preview .table th {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#training-csv-preview .table td {
+  max-width: 480px;
+  text-overflow: ellipsis;
+}
+
+.loginAlert {
+  text-align: center;
 }

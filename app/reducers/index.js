@@ -1,10 +1,16 @@
 import { combineReducers } from 'redux';
 import { routerReducer as routing } from 'react-router-redux';
-import counter from './counter';
+import app from './app';
+import home from './home';
+import session from './session';
+import training from './training';
 import settings from './settings';
 
 const rootReducer = combineReducers({
-  counter,
+  app,
+  home,
+  session,
+  training,
   settings,
   routing
 });

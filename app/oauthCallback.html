@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Google Prediction Trainer - Login</title>
+    <script type="text/javascript">
+      const urlParams = new URLSearchParams(window.location.search);
+
+      if (urlParams.has('code')) {
+        const authCode = urlParams.get('code');
+
+        window.localStorage.setItem('oauthCode', authCode);
+        window.location = 'http://localhost:3333/app/app.html#login';
+      } else {
+        console.log(window.location);
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

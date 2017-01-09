@@ -1,6 +1,6 @@
 export const SAVE_SETTINGS = 'SAVE_SETTINGS';
 
-export function save(settings) {
+export function saveSettings(settings) {
   return {
     type: SAVE_SETTINGS,
     settings
